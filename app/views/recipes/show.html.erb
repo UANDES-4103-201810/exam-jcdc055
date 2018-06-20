@@ -129,7 +129,8 @@
         <%= image_tag('pizza_hut.jpg', width: '250px')%>
         <div class="card-body">
           <h4 class="card-title">  <%= @recipe.name %> </h4>
-          <h4 class="card-title">  <%= @recipe.info %> </h4>
+          <h4 class="card-title">  Info:<%= @recipe.info %> </h4>
+          <h4 class="card-title"> Price: <%= @recipe.price %> </h4>
 
           <%= link_to 'Add to cart', new_pizza_path(p_id: @recipe.id,r_id:@recipe.name) %>
 
