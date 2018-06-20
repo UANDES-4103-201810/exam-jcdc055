@@ -129,7 +129,13 @@
 <% Recipe.all.each do |recipe| %>
       <div class="col-sm">
         <%= image_tag('pizza_hut.jpg', width: '150px')%>
-        <td> <a class="btn btn-info" style="color:#ffffff" href="/projects"> Add to shopping cart</a> Recipe:<%= recipe.name %> </td>
+        <div>
+        </div>
+        <td><%= link_to 'Show', recipe %></td>
+
+        <div>
+        </div>
+            Recipe:<%= recipe.name %>
 
         <div>
         </div>
