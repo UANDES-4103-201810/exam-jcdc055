@@ -61,7 +61,7 @@
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="btn btn-info" style="color:#ffffff" href="/projects">Shopping Cart</a>
+          <a class="btn btn-info" style="color:#ffffff" href="/">Shopping Cart</a>
 
         </li>
         <div>
@@ -128,6 +128,8 @@
     <%=form_for @pizza, html: { multipart: true }, method: 'POST' do |xx| %>
       <label for="cost1">Crust</label>
       <div> <%= xx.text_field :crust_id  %></div>
+      <label for="cost1">  </label>
+      <div> <%= xx.hidden_field :name , :value => @id1 %></div>
 
 
 
@@ -137,6 +139,5 @@
       </div>
     <%end%>
 
-<%= render 'form', pizza: @pizza %>
+    </div>
 
-<%= link_to 'Back', pizzas_path %>

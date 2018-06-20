@@ -17,8 +17,6 @@ ActiveRecord::Schema.define(version: 20180620195357) do
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "pizza_id"
-    t.index ["pizza_id"], name: "index_crusts_on_pizza_id"
   end
 
   create_table "deliveries", force: :cascade do |t|
@@ -26,9 +24,11 @@ ActiveRecord::Schema.define(version: 20180620195357) do
     t.string "address2"
     t.string "phone"
     t.integer "order_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_deliveries_on_order_id"
+    t.index ["user_id"], name: "index_deliveries_on_user_id"
   end
 
   create_table "ingredients", force: :cascade do |t|
@@ -40,29 +40,31 @@ ActiveRecord::Schema.define(version: 20180620195357) do
   end
 
   create_table "orders", force: :cascade do |t|
+    t.integer "pizza_id"
     t.boolean "payment"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["pizza_id"], name: "index_orders_on_pizza_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "pizzas", force: :cascade do |t|
     t.string "name"
-    t.integer "order_id"
+    t.integer "crust_id"
+    t.integer "recipe_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["order_id"], name: "index_pizzas_on_order_id"
+    t.index ["crust_id"], name: "index_pizzas_on_crust_id"
+    t.index ["recipe_id"], name: "index_pizzas_on_recipe_id"
   end
 
   create_table "recipes", force: :cascade do |t|
     t.string "name"
     t.integer "price"
     t.string "info"
-    t.integer "pizza_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["pizza_id"], name: "index_recipes_on_pizza_id"
   end
 
   create_table "users", force: :cascade do |t|

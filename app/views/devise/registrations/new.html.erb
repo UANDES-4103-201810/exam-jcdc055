@@ -1,4 +1,124 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Complete Bootstrap 4 Website Layout</title>
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link href="style.css" rel="stylesheet">
+
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+        /* Make the image fully responsive */
+
+  </style>
+</head>
+<body>
+
+
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <div class="container-fluid">
+
+
+
+
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <%= image_tag('logo.png', width: '150px')%><a class="btn btn-info" style="color:#ffffff" href="/">Home</a>
+
+
+        </li>
+        <div>
+
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+        </div>
+
+
+
+
+        <div>
+
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+        </div>
+
+
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="btn btn-info" style="color:#ffffff" href="/">Shopping Cart</a>
+
+        </li>
+        <div>
+
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+        </div>
+
+
+
+        <% if user_signed_in? %>
+
+          <li> <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :style=> 'color:#7c0a02;'%></li>
+
+
+          </div>
+
+
+
+
+
+
+        <%else%>
+          <a class="btn btn-info" style="color:#ffffff" href="/users/sign_in">Log in</a>
+
+
+        <%end%>
+        </li>
+
+        </ul>
+
+        </div>
+
+
+  </div>
+</nav>
+
+<div>
+
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+</div>
+<div>
+
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+</div>
+<div>
+
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+</div>
+<div>
+
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+</div>
 
 
 

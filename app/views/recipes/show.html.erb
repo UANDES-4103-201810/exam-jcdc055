@@ -61,7 +61,7 @@
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="btn btn-info" style="color:#ffffff" href="/projects">Shopping Cart</a>
+          <a class="btn btn-info" style="color:#ffffff" href="/">Shopping Cart</a>
 
         </li>
         <div>
@@ -131,7 +131,7 @@
           <h4 class="card-title">  <%= @recipe.name %> </h4>
           <h4 class="card-title">  <%= @recipe.info %> </h4>
 
-          <%= link_to 'Add to cart', new_pizza_path(p_id: @recipe.id) %>
+          <%= link_to 'Add to cart', new_pizza_path(p_id: @recipe.id,r_id:@recipe.name) %>
 
 
 
@@ -144,6 +144,3 @@
     </div>
 
 
-
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Back', recipes_path %>

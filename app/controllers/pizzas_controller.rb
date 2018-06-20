@@ -15,7 +15,8 @@ class PizzasController < ApplicationController
   # GET /pizzas/new
   def new
     @pizza = Pizza.new
-    @id = params[:r_id]
+    @id = params[:p_id]
+    @id1 = params[:r_id]
   end
 
   # GET /pizzas/1/edit
