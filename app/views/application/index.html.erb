@@ -20,10 +20,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <style>
     /* Make the image fully responsive */
-    .carousel-inner img {
-      width: 100%;
-      height: 100%;
-    }
+
   </style>
 </head>
 <body>
@@ -36,11 +33,12 @@
 
 
 
+
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="btn btn-info" style="color:#ffffff" href="/categories">Explore</a>
+          <%= image_tag('logo.png', width: '150px')%><a class="btn btn-info" style="color:#ffffff" href="/">Home</a>
 
 
         </li>
@@ -49,8 +47,6 @@
           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
         </div>
-
-
 
 
 
@@ -65,7 +61,7 @@
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="btn btn-info" style="color:#ffffff" href="/projects">Get Funded</a>
+          <a class="btn btn-info" style="color:#ffffff" href="/projects">Shopping Cart</a>
 
         </li>
         <div>
@@ -77,16 +73,10 @@
 
 
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <div class="dropdown">
-              <button class="btn btn-primary dropdown-toggle" style="color:#ffffff" type="button" data-toggle="dropdown"> <%= current_user.name %>
-                <span class="caret"></span></button>
-              <ul class="dropdown-menu">
 
-                <li><%= link_to "Profile", user_path(current_user), :style=> 'color:#ffffff;'%></li>
-                <li> <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :style=> 'color:#ffffff;'%></li>
+                <li> <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :style=> 'color:#7c0a02;'%></li>
 
-              </ul>
+
             </div>
 
 
@@ -108,3 +98,63 @@
 
   </div>
 </nav>
+
+<div>
+
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+</div>
+<div>
+
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+</div>
+<div>
+
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+</div>
+<div>
+
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+</div>
+<div class="container">
+  <h1>Recipes</h1>
+<div class="jumbotron">
+  <div class="page-header">
+
+  </div>
+  <div class="row">
+<% Recipe.all.each do |recipe| %>
+      <div class="col-sm">
+        <%= image_tag('pizza_hut.jpg', width: '150px')%>
+        <td> <a class="btn btn-info" style="color:#ffffff" href="/projects"> Add to shopping cart</a> Recipe:<%= recipe.name %> </td>
+
+        <div>
+        </div>
+        <td> Price: <%= recipe.price %> </td>
+
+
+
+      </div>
+
+
+    <% end %>
+  </div>
+</div>
+</div>
+<div>
+
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+</div>
+
+
+
+
+
+
+
+
+
